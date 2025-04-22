@@ -62,6 +62,7 @@ const deleteDepartment=async(req,res)=>{
     } catch (error) {
         return res.status(500).json({ success: false, error: "delete department server error" })
     }
+    
 }
 
 
