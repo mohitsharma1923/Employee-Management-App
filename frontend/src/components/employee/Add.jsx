@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { fetchDepartments } from "../../utils/EmployeeHelpers";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
 
 const Add = () => {
   const [departments, setDepartments] = useState([]);
   const [formData, setFormData] = useState({});
+  const navigate=useNavigate()
   useEffect(() => {
     const getDepartments = async () => {
       const departments = await fetchDepartments();
